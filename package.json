@@ -1,0 +1,25 @@
+{
+  "name": "morpho",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "subPackages": [
+    "server",
+    "client"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "subpackage": "^1.1.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "scripts": {
+    "postinstall": "subpkg install",
+    "build": "subpkg run build",
+    "clean": "subpkg run clean",
+    "start": "node ./server/dist/index.js"
+  }
+}
